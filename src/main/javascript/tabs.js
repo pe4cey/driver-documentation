@@ -69,6 +69,8 @@ function tabTheSource($content) {
                 for (var j = 0; j < $elements.length; j++) {
                     $elements[j].tab('show');
                 }
+            }).on('click', function(e){
+                setTimeout(function(){ $('html, body').scrollTop( $(e.target).offset().top); }, 10);
             });
             if (language in languageEventElements) {
                 languageEventElements[language].push($a);
